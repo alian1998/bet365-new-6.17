@@ -1,0 +1,41 @@
+/* PhoneInput.module.scss */
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  /* max-width: 420px; */
+  border: 1px solid #ffff;
+  border-radius: 4px;
+}
+
+.inputShadow {
+  width: 100%;
+  padding: 20px 12px !important;
+  /* background-color: #005c30 !important; */
+  color: #ddd;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  /* ✅ Ensure padding doesn't break layout */
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  /* padding: 24px 26px; */
+
+}
+
+ 
+
+/* Styling the country selector */
+.countrySelector {
+  background-color: #ffffff2e !important;
+  
+ }
+
+ 

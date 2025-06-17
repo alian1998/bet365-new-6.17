@@ -1,0 +1,49 @@
+/**
+ * Utility for playing game sounds
+ */
+
+// Base64 encoded small audio files
+const SPIN_SOUND_BASE64 = "SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+
+const WIN_SOUND_BASE64 = "SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+
+// Create audio instances
+let spinSound: HTMLAudioElement | null = null;
+let winSound: HTMLAudioElement | null = null;
+
+// Initialize audio objects if they don't exist
+function initAudio() {
+  if (typeof window === 'undefined') return;
+  
+  if (!spinSound) {
+    spinSound = new Audio(`data:audio/mpeg;base64,${SPIN_SOUND_BASE64}`);
+  }
+  
+  if (!winSound) {
+    winSound = new Audio(`data:audio/mpeg;base64,${WIN_SOUND_BASE64}`);
+  }
+}
+
+// Play the spinning sound effect
+export function playSpinSound() {
+  initAudio();
+  if (spinSound) {
+    spinSound.currentTime = 0;
+    spinSound.play().catch(() => {
+      // Handle autoplay restrictions silently
+      console.log('Audio play was prevented. Interact with the page first.');
+    });
+  }
+}
+
+// Play the winning sound effect
+export function playWinSound() {
+  initAudio();
+  if (winSound) {
+    winSound.currentTime = 0;
+    winSound.play().catch(() => {
+      // Handle autoplay restrictions silently
+      console.log('Audio play was prevented. Interact with the page first.');
+    });
+  }
+}
