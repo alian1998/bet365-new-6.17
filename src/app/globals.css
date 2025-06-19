@@ -247,7 +247,7 @@ input[type="number"] {
 
 /* dd */
 .cardColor {
-  background: linear-gradient(to right, #be5f05, #034825);
+  background: linear-gradient(to right, #be5f05, #26ab8b);
   /* from-gray-900 to-gray-800 */
 }
 

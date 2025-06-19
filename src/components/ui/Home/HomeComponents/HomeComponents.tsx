@@ -393,7 +393,7 @@ const HomeComponents = ({ balanceData, balance, tokenId }: IProps) => {
           src={icon}
           width={100}
           height={100}
-          className="rounded-full p-1  border border-2 border-white rounded-full rounded-full "
+          className="rounded-full p-1 rounded-full rounded-full "
         />
 
         {/* 🔴 Unread badge */}
