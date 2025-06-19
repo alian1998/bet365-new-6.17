@@ -325,7 +325,8 @@ input[type="number"] {
 }
 
 .cardBorder {
-  background: conic-gradient(from 0deg, #eae982, #a8d9a6, #53c6c3, #eae982);
+  border-radius: 10px;
+  background: linear-gradient(to right, #ec1313, #bc0f0f, #ffdc16);
 }
 
 
