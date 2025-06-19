@@ -15,7 +15,7 @@ import Details from "@/components/ui/Home/Details/Details";
 import { useState } from "react";
 import HelpDeskModal from "./HelpDeskModal";
 // import icon from '@/assets/icon/msbutton.png'
-import icon from "@/assets/icon/help.jpg";
+import icon from "@/assets/icon/b.png";
 import spinicon from "@/assets/icon/spinicon.gif";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -393,7 +393,7 @@ const HomeComponents = ({ balanceData, balance, tokenId }: IProps) => {
           src={icon}
           width={100}
           height={100}
-          className="rounded-full  border border-2 border-white rounded-full rounded-full "
+          className="rounded-full p-1  border border-2 border-white rounded-full rounded-full "
         />
 
         {/* 🔴 Unread badge */}

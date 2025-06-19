@@ -6,12 +6,14 @@ import React, { useContext } from "react";
 const Warning = () => {
   const context = useContext(ContextApi);
   if (!context) {
-    return
+    return;
   }
   const { assets } = context;
   // console.log(assets?.social);
 
-  const affiliate = assets?.social?.find((social: any) => social.name === "Affiliate");
+  const affiliate = assets?.social?.find(
+    (social: any) => social.name === "Affiliate"
+  );
   const affiliateLink = affiliate?.link || "/";
 
   return (
@@ -27,15 +29,18 @@ const Warning = () => {
           />
         </div>
       ))}
-      <a
-        href={`https://${affiliateLink}`} target="_blank"
-        className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
-        <span className="w-full h-full bg-gradient-to-br from-[#67f0c2] via-[#017d7d] to-[#000000] group-hover:from-[#000000] group-hover:via-[#017d7d] group-hover:to-[#67f0c2] absolute"></span>
-        <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
-          <span className="relative text-white">Affiliate</span>
-        </span>
-      </a>
-
+      {affiliate && (
+        <a
+          href={`https://${affiliateLink}`}
+          target="_blank"
+          className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+        >
+          <span className="w-full h-full bg-gradient-to-br from-[#67f0c2] via-[#017d7d] to-[#000000] group-hover:from-[#000000] group-hover:via-[#017d7d] group-hover:to-[#67f0c2] absolute"></span>
+          <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+            <span className="relative text-white">Affiliate</span>
+          </span>
+        </a>
+      )}
     </div>
   );
 };

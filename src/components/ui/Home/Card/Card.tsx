@@ -42,7 +42,7 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
       <div className="cardBorder p-1">
         <div
           ref={containerRef}
-          className="bg-gradient-to-r from-[#fbe87b] via-[#2cc09d] to-[#f8e472]  px-3 py-5 rounded-lg   text-white1 flex items-center overflow-auto gap-2 hide-scrollbar "
+          className="bg-gradient-to-r from-[#fde047] via-[#fde047] to-[#2cc09d]  px-3 py-5 rounded-lg   text-white1 flex items-center overflow-auto gap-2 hide-scrollbar "
         >
           {gamesItem.map((card: ICard) => (
             <div
