@@ -56,7 +56,7 @@ export default function LobbyList() {
         console.error("Auto-launch error:", err);
         setAutoLaunching(false);
       }
-    }, 3000);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [hasAutoLaunch, platForm, gameType, gameCodeParam]);
