@@ -33,17 +33,17 @@ const CanPlayUser = ({
  
   return (
       <div
-      className={`grid ${activeCard == "JetX" || activeCard == "Sports"
+      className={`grid ${activeCard == "365" || activeCard == "Sports"
           ? "grid-cols-2 gap-2"
           : "grid-cols-3 gap-2"
         }`}
     >
       {filter?.gameItems?.map((item: IGameData) => (
         <div onClick={() => handleGameClick(item)} key={item.id} className=" w-full text-center">
-          <div  className={`cardAmination ${activeCard == "JetX" || activeCard == "Sports" ? "p-1" : ""
+          <div  className={`cardAmination ${activeCard == "365" || activeCard == "Sports" ? "p-1" : ""
             }  cursor-pointer`}>
             <div
-              className={`relative w-full h-[110px] overflow-hidden rounded-md ${activeCard == "JetX" || activeCard == "Sports" ? "" : "p-1"
+              className={`relative w-full h-[110px] overflow-hidden rounded-md ${activeCard == "365" || activeCard == "Sports" ? "" : "p-1"
                 }`}
             >
               <Image

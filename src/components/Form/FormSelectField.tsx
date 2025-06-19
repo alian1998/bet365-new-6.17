@@ -46,7 +46,7 @@ const FormSelectField = ({
           <div className="flex justify-between items-center gap-1 text-gray-500 w-full">
             {props.data.label}
             <div className="flex gap-2 place-items-center">
-            <a
+              <a
                 href={`https://wa.me/${props?.data?.label}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +65,14 @@ const FormSelectField = ({
   const customStyles = {
     control: (provided: any) => ({
       ...provided,
-      backgroundColor: "#FFF7E5",
+      backgroundColor: "transparent", // Make main box transparent
+      color: "#fff", // Set text color to white
+      border: "1px solid #ccc", // Optional: tweak border
+      boxShadow: "none", // Optional: remove focus shadow
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: "#fff", // White selected text
     }),
     option: (provided: any, state: any) => ({
       ...provided,
