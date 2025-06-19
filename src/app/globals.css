@@ -230,7 +230,7 @@ input[type="number"] {
 /* confirmation modal  */
 /* dd */
 .bgColor {
-  background: linear-gradient(to right, #011709, #034825);
+  background: linear-gradient(to right, #ec1313, #41ed97);
   /* from-gray-900 to-gray-800 */
   color: #111827;
 }
@@ -247,12 +247,12 @@ input[type="number"] {
 
 /* dd */
 .cardColor {
-  background: linear-gradient(to right, #01260f, #034825);
+  background: linear-gradient(to right, #be5f05, #034825);
   /* from-gray-900 to-gray-800 */
 }
 
 .cardColor2 {
-  background: linear-gradient(to left bottom, #011709, #26ab8b, #e1cf6d);
+  background: linear-gradient(to left, #149577, #26ab8b, #e1cf6d);
 }
 
 .borderColor {
@@ -322,6 +322,10 @@ input[type="number"] {
   height: 42px !important;
 
 
+}
+
+.cardBorder {
+  background: conic-gradient(from 0deg, #eae982, #a8d9a6, #53c6c3, #eae982);
 }
 
 

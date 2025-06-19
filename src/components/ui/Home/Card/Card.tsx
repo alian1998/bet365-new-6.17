@@ -30,20 +30,19 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
     }
   }, [activeCard]);
 
-
   const queryKey = `gamingData , ${activeCard}`;
   const url = tokenId
     ? `/game-items/get-active-game ` // If tokenId exists, fetch active games
     : `/game-categorys/get-all`; // If no tokenId, fetch all categories
 
   const { data: gamingData } = useGetData(queryKey, url);
- 
+
   return (
     <>
-      <div className=" p-1 rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.4)] ">
+      <div className="cardBorder p-1">
         <div
           ref={containerRef}
-          className="mainBgColor px-3 py-5 rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.4)]  text-white1 flex items-center overflow-auto gap-2 hide-scrollbar "
+          className="bg-gradient-to-r from-[#fbe87b] via-[#2cc09d] to-[#f8e472]  px-3 py-5 rounded-lg   text-white1 flex items-center overflow-auto gap-2 hide-scrollbar "
         >
           {gamesItem.map((card: ICard) => (
             <div
@@ -61,17 +60,19 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
                   width={100}
                 />
                 <h4
-                  className={`text-[16px] font-medium ${activeCard.toLowerCase() == card?.item?.toLowerCase() ? "text-secondary" : "text-white1"}`}
+                  className={`text-[16px] font-medium ${
+                    activeCard.toLowerCase() == card?.item?.toLowerCase()
+                      ? "text-secondary"
+                      : "text-white1"
+                  }`}
                 >
                   {card.item}
                 </h4>
               </div>
             </div>
-
           ))}
         </div>
       </div>
-
 
       <div className=" mainBgColor bg-opacity-20 pb-2">
         <div className="flex justify-between place-items-center  items-center mb-2 mt-[6px] px-3 pt-2">
@@ -88,7 +89,7 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
           gamingData={tokenId ? gamingData : gamingData}
         />
       </div>
-    </  >
+    </>
   );
 };
 

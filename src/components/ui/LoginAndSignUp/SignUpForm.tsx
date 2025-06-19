@@ -68,9 +68,7 @@ const SignUpForm = ({
             <button
               onClick={() => setRegistrationMethod(value)}
               className={` ${
-                value == registrationMethod
-                  ? "bg-emerald-800"
-                  : "bg-transperant"
+                value == registrationMethod ? "cardColor2" : "bg-transperant"
               } relative z-10 w-full px-3 text-white  py-2 px-2 font-semibold rounded-md text-[14px] sm:text-[16px] 
              px-2 border-2 border-white rounded-md py-2 `}
             >

@@ -22,7 +22,7 @@ import { casinoData } from "./casino";
 export const gamesItem = [
   {
     id: "1",
-    item: "JetX",
+    item: "365",
     image: '/popularSvg.gif',
     itemData: popularItem,
   },

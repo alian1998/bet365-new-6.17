@@ -9,7 +9,7 @@ const LoadingAndButton3d = ({ isPending, buttonName }: IProps) => {
     <div className="py-2 font-medium rounded w-full text-black1">
       {isPending ? (
         <div
-          className="relative w-full bg-[#ffc107] text-[#004d28] text-2xl font-bold py-3 px-6 rounded-lg
+          className="relative justify-center w-full bg-[#ffc107] text-[#004d28] text-2xl font-bold py-3 px-6 rounded-lg
                      border-l-[5px] border-[#d9a400]
                      "
         >

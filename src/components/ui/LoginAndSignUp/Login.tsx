@@ -8,7 +8,6 @@ import { getGameToken } from "@/utils/token";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 
-
 const Login = () => {
   const router = useRouter();
 
@@ -19,7 +18,6 @@ const Login = () => {
     }
   }, [router]);
 
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -27,23 +25,22 @@ const Login = () => {
     };
   }, []);
 
-
   const context = useContext(ContextApi);
   if (!context) {
     console.error("something wrong");
-    return
+    return;
   }
   const { assets } = context;
 
   return (
-    <div className=" w-full bg-[url('/loginbg.jpeg')] h-screen bg-cover bg-center bg-no-repeat">
+    <div className=" w-full bg-[url('/loginbg1.jpeg')] h-screen bg-cover bg-center bg-no-repeat">
       <div className="relative w-full h-20 flex items-center px-5 z-10">
-
-        <Link href={'/'} className="absolute left-3">
+        <Link href={"/"} className="absolute left-3">
           <button
             className="bgColor w-12 h-12 flex justify-center items-center bg-primary text-white rounded-full 
                 outline-none relative z-0
-                border-[5px] border-primary ">
+                border-[5px] border-primary "
+          >
             <FaArrowLeft className="text-2xl text-[#ddd]" />
           </button>
         </Link>
@@ -68,8 +65,7 @@ const Login = () => {
         </div>
       </div>
       <div className="flex items-center justify-center  ">
-         
-        <div className="w-full mt-[160px] px-4  z-10">
+        <div className="w-full mt-[100px] px-4  z-10">
           <div className=" w-full">
             <LoginForm />
           </div>

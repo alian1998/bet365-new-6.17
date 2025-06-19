@@ -39,7 +39,7 @@ const FormInputField = ({
       render={({ field, fieldState: { error } }) => (
         <div className={`${type === "checkbox" ? "flex flex-col" : ""}`}>
           {title ? (
-            <p className="text-gray-100 font-semibold text-[14px] mb-1">
+            <p className="text-gray-300 font-semibold text-[14px] mb-1">
               {title}
               {name !== "referCode" && <span className="text-red-500">*</span>}
             </p>

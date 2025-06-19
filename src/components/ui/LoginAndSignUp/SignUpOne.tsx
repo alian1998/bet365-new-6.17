@@ -89,7 +89,7 @@ const SignUpOne = ({ reffferal, agentOption, affiliateReferalId }: any) => {
     },
   });
   const formSubmit: SubmitHandler<FieldValues> = async (data) => {
-     data.phone = phone
+    data.phone = phone;
     mutate(data);
   };
 
@@ -189,7 +189,7 @@ const SignUpOne = ({ reffferal, agentOption, affiliateReferalId }: any) => {
             </p>
             <FormSelectField
               name="adminId"
-              className="bg-transperant signup-select pb-10"
+              className="!bg-transperant signup-select pb-10"
               options={agentOption}
               type="string"
               defaultValue={0}
