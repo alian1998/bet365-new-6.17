@@ -21,7 +21,7 @@ const geistMono = localFont({
   description: "bet365all",
 
   icons: {
-    icon: "https://cdn-icons-png.flaticon.com/512/2927/2927808.png",
+    icon: "https://ossimg.bet365all.live/fevicon/fevicon.png",
   },
 };
 
