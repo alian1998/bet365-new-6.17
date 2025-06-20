@@ -22,7 +22,7 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
   const firstItemRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (activeCard.toLowerCase() == "jetx" && containerRef.current) {
+    if (activeCard.toLowerCase() == "365" && containerRef.current) {
       containerRef.current.scrollTo({
         left: 0,
         behavior: "smooth",
@@ -46,7 +46,7 @@ const Card = ({ tokenId }: { tokenId: string | undefined }) => {
         >
           {gamesItem.map((card: ICard) => (
             <div
-              ref={card.item.toLowerCase() == "jetx" ? firstItemRef : null}
+              ref={card.item.toLowerCase() == "365" ? firstItemRef : null}
               className="borderColorRoted p-[3px] z-auto group min-w-20 h-20 cursor-pointer flex items-center justify-center"
               key={card.id}
               onClick={() => setActiveCard(card.item)}

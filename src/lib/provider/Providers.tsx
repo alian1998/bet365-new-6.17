@@ -47,7 +47,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
   const [galleryOpen, setGalleryOpen] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
 
-  const [activeCard, setActiveCard] = useState<string>("JetX");
+  const [activeCard, setActiveCard] = useState<string>("365");
   const [assets, setAssets] = useState<string | null>(null);
 
   const getdata = async () => {
