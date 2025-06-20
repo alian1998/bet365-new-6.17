@@ -52,7 +52,7 @@ figure.split-spinner span:nth-child(1) {
   transform: rotate3d(0, 0, 1, 90deg);
 }
 figure.split-spinner span:nth-child(1)::after {
-  border-top-color: #01eff1;
+  border-top-color: #41ed97;
   animation: split 2s 0s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
@@ -60,7 +60,7 @@ figure.split-spinner span:nth-child(2) {
   transform: rotate3d(0, 0, 1, 150deg);
 }
 figure.split-spinner span:nth-child(2)::after {
-  border-top-color: #21cdcd;
+  border-top-color: #20be6f;
   animation: split 2s 0.11s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
@@ -68,7 +68,7 @@ figure.split-spinner span:nth-child(3) {
   transform: rotate3d(0, 0, 1, 210deg);
 }
 figure.split-spinner span:nth-child(3)::after {
-  border-top-color: #35aaaa;
+  border-top-color: #9df11f;
   animation: split 2s 0.22s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
@@ -76,7 +76,7 @@ figure.split-spinner span:nth-child(4) {
   transform: rotate3d(0, 0, 1, 270deg);
 }
 figure.split-spinner span:nth-child(4)::after {
-  border-top-color: #017d7d;
+  border-top-color: #f08127;
   animation: split 2s 0.33s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
@@ -84,7 +84,7 @@ figure.split-spinner span:nth-child(5) {
   transform: rotate3d(0, 0, 1, 330deg);
 }
 figure.split-spinner span:nth-child(5)::after {
-  border-top-color: #416363;
+  border-top-color: #da5f13;
   animation: split 2s 0.44s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
@@ -92,7 +92,7 @@ figure.split-spinner span:nth-child(6) {
   transform: rotate3d(0, 0, 1, 30deg);
 }
 figure.split-spinner span:nth-child(6)::after {
-  border-top-color: #000000;
+  border-top-color: #ec1313;
   animation: split 2s 0.55s ease infinite;
   transform: rotate3d(0.5, 1, 0, 180deg);
 }
