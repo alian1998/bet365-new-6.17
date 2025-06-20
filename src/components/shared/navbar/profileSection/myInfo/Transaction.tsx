@@ -90,7 +90,7 @@ const Transaction = ({
               <tbody>
                 {transactions.length > 0 ? (
                   transactions.map((txn, index) => (
-                    <tr key={index} className="cardColor2 borderColor">
+                    <tr key={index} className="allCards borderColor">
                       <td className="px-2 py-2 text-left text-white1">{txn.source}</td>
                       <td className="px-2 py-2 text-center text-white1">{txn.amount}</td>
                       <td className="px-2 py-2 text-center text-white1">{txn.beforeBalance}</td>
