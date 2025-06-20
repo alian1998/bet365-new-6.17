@@ -94,7 +94,13 @@ const SignUpTwo = ({ reffferal, agentOption, affiliateReferalId }: any) => {
   const formSubmit: SubmitHandler<FieldValues> = async (data) => {
     const { referCode, ...rest } = data;
     const payload = referCode ? { ...data } : { ...rest };
-    mutate(payload);
+
+    const sanitizedData = {
+      ...payload,
+      userName: payload.userName?.replace(/\s+/g, ""),
+    };
+
+    mutate(sanitizedData);
   };
 
   return (

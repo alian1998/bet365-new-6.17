@@ -33,7 +33,7 @@ const Login = () => {
   const { assets } = context;
 
   return (
-    <div className=" w-full bg-[url('/loginbg1.jpeg')] h-screen bg-cover bg-center bg-no-repeat">
+    <div className=" w-full bg-[url('/bg.jpg')] h-screen bg-cover bg-center bg-no-repeat">
       <div className="relative w-full h-20 flex items-center px-5 z-10">
         <Link href={"/"} className="absolute left-3">
           <button

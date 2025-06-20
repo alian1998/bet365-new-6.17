@@ -1,7 +1,7 @@
 {
   "name": "bet-365-all",
   "version": "0.1.0",
-    "engines": {
+  "engines": {
     "node": "20"
   },
   "private": true,

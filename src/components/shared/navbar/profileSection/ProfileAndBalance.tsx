@@ -43,8 +43,8 @@ const ProfileAndBalance: React.FC<ProfileAndBalanceProps> = ({
   const { data: balance, refetch } = useQuery({
     queryKey: ["balance"],
     queryFn: ProfileDataFetch,
-    staleTime: 1000, // Data is considered fresh for 1 second
-    refetchInterval: 10000, // Auto refetch every 10 seconds
+    // staleTime: 1000, // Data is considered fresh for 1 second
+    // refetchInterval: 10000, // Auto refetch every 10 seconds
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     retry: false,
@@ -54,11 +54,7 @@ const ProfileAndBalance: React.FC<ProfileAndBalanceProps> = ({
   const handleRefreshClick = () => {
     setIsSpinning(true);
     refetch();
-    setTimeout(() => {
-      setIsSpinning(false);
-    }, 500);
   };
-
 
   return (
     <>
@@ -87,8 +83,9 @@ const ProfileAndBalance: React.FC<ProfileAndBalanceProps> = ({
         <div className="flex items-center gap-2">
           <h6 className="text-white">Balance</h6>
           <LuRefreshCcw
-            className={`text-white size-6 cursor-pointer ${isSpinning ? "animate-custom-spin" : ""
-              }`}
+            className={`text-white size-6 cursor-pointer ${
+              isSpinning ? "animate-custom-spin" : ""
+            }`}
             onClick={handleRefreshClick}
           />
         </div>
