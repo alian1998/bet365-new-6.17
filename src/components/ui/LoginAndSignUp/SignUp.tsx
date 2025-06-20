@@ -24,7 +24,7 @@ const SignUp = ({ data }: any) => {
   const { assets } = context;
 
   return (
-    <div className="w-full min-h-screen overflow-y-auto items-center justify-center bg-[url('/loginbg.jpeg')] bg-cover bg-center bg-no-repeat ">
+    <div className="w-full min-h-screen overflow-y-auto items-center justify-center bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat ">
       <div className=" ">
         <div className="w-full">
           <Link href="/">

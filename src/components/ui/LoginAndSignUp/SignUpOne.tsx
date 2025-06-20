@@ -90,7 +90,13 @@ const SignUpOne = ({ reffferal, agentOption, affiliateReferalId }: any) => {
   });
   const formSubmit: SubmitHandler<FieldValues> = async (data) => {
     data.phone = phone;
-    mutate(data);
+
+    const sanitizedData = {
+      ...data,
+      userName: data.userName?.replace(/\s+/g, ""),
+    };
+
+    mutate(sanitizedData);
   };
 
   return (

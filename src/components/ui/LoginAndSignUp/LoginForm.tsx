@@ -52,7 +52,12 @@ const LoginForm = () => {
   });
 
   const formSubmit: SubmitHandler<FieldValues> = async (data) => {
-    mutate(data);
+    const sanitizedData = {
+      ...data,
+      userName: data.userName?.replace(/\s+/g, ""),
+    };
+
+    mutate(sanitizedData);
   };
 
   return (
