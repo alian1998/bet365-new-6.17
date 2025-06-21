@@ -56,7 +56,7 @@ export default function GameListPage() {
         console.error("Auto-launch error:", err);
         setAutoLaunching(false);
       }
-    }, 800);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [hasAutoLaunch, platForm, gameType, gameCodeParam]);
