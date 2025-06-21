@@ -95,12 +95,7 @@ const SignUpTwo = ({ reffferal, agentOption, affiliateReferalId }: any) => {
     const { referCode, ...rest } = data;
     const payload = referCode ? { ...data } : { ...rest };
 
-    const sanitizedData = {
-      ...payload,
-      userName: payload.userName?.replace(/\s+/g, ""),
-    };
-
-    mutate(sanitizedData);
+    mutate(payload);
   };
 
   return (
